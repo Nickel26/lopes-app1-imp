@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Application{
+    method addItem()
+    method removeItem()
+    method editList()
+    method editItem()
+    method saveList()
+    method loadList()
+    method markComplete()
+    method unMarkComplete()
+}
+
+class TodoList{
+    String Title
+    Arraylist Title
+    method checkTitle()
+    method addItem()
+    method removeItem()
+    method editList()
+    method editItem()
+    method saveList()
+    method loadList()
+    method markComplete()
+    method unMarkComplete()
+
+}
+
+class TodoItem{
+    String Title
+    String Description
+    String DueDate
+    method getTitle()
+    method getDescription()
+    method getDueDate()
+    method setTitle()
+    method setDescription()
+    method setDueDate()
+    method checkTitle()
+    method checkComplete()
+    method checkIncomplete()
+}
+
+TodoItem <|- TodoList
+
+
+@enduml
