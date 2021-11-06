@@ -1,29 +1,23 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class Application{
-    method addItem()
-    method removeItem()
-    method editList()
-    method editItem()
-    method saveList()
-    method loadList()
-    method markComplete()
-    method unMarkComplete()
+class TodoListApplication{
 }
+
+class App1Controller{
+}
+
 
 class TodoList{
     String Title
-    Arraylist Title
-    method checkTitle()
+    Arraylist todoList
     method addItem()
     method removeItem()
-    method editList()
     method editItem()
     method saveList()
     method loadList()
-    method markComplete()
-    method unMarkComplete()
+    method clearList()
+    method setTitle()
 
 }
 
@@ -31,15 +25,12 @@ class TodoItem{
     String Title
     String Description
     String DueDate
-    method getTitle()
-    method getDescription()
-    method getDueDate()
+    String complete
     method setTitle()
     method setDescription()
     method setDueDate()
-    method checkTitle()
-    method checkComplete()
-    method checkIncomplete()
+    method setComplete()
+    method setIncomplete()
 }
 
 TodoItem <|- TodoList

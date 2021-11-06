@@ -1,8 +1,7 @@
-/*
+package Application;/*
  *  UCF COP3330 Fall 2021 Application Assignment 1 Solution
  *  Copyright 2021 Nicholas Lopes
  */
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,13 +9,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class TodoListApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Parent root =
-                FXMLLoader.load(Objects.requireNonNull(getClass().getResource("App1.fxml")));
+                FXMLLoader.load(getClass().getResource("App1.fxml"));
 
         Scene scene = new Scene(root); // attach scene graph to scene
         stage.setTitle("Todo List"); // displayed in window's title bar
@@ -25,7 +23,7 @@ public class TodoListApplication extends Application {
     }
 
     public static void main(String[] args) {
-        // create an Application.TodoList object and call its start method
+        // create a Application.TodoList object and call its start method
         launch(args);
     }
 }
