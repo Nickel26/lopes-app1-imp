@@ -2,11 +2,32 @@
 'https://plantuml.com/class-diagram
 
 class TodoListApplication{
+method start()
+method main()
 }
 
 class App1Controller{
+    Button AddItemButton;
+    Button ClearListButton;
+    CheckBox CompleteCheck;
+    TableColumn<TodoItem, String> Description;
+    TableColumn<TodoItem, String> DueDate;
+    Button EditItemButton;
+    CheckBox IncompleteCheck;
+    TableColumn<TodoItem, String> ItemCompletion;
+    TextField ItemDescriptionString;
+    DatePicker ItemDueDate;
+    TableColumn<TodoItem, String> ItemName;
+    TextField ItemTitleString;
+    TableView<TodoItem> Table;
+    TextField ListTitle;
+    Button LoadListButton;
+    Button NewListButton;
+    Button RemoveItemButton;
+    Button SaveListButton;
+    TextField TitleDisplay;
+    TodoList todoList;
 }
-
 
 class TodoList{
     String Title
@@ -25,7 +46,10 @@ class TodoItem{
     String Title
     String Description
     String DueDate
-    String complete
+    CheckBox checkbox
+    method getItemTitle()
+    method getDescription()
+    method getDueDate()
     method setTitle()
     method setDescription()
     method setDueDate()

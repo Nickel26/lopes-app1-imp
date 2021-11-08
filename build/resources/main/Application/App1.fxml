@@ -16,12 +16,12 @@
    <children>
       <ToolBar layoutX="11.0" layoutY="434.0" prefHeight="40.0" prefWidth="584.0">
          <items>
-            <CheckBox fx:id="IncompleteCheck" mnemonicParsing="false" prefHeight="17.0" prefWidth="184.0" text="Show Incomplete Items">
+            <CheckBox fx:id="IncompleteCheck" mnemonicParsing="false" onAction="#showIncompleteItems" prefHeight="17.0" prefWidth="184.0" text="Show Incomplete Items">
                <padding>
                   <Insets left="10.0" />
                </padding>
             </CheckBox>
-            <CheckBox fx:id="CompleteCheck" mnemonicParsing="false" text="Show Complete Items">
+            <CheckBox fx:id="CompleteCheck" mnemonicParsing="false" onAction="#showCompleteItems" text="Show Complete Items">
                <padding>
                   <Insets left="10.0" right="10.0" />
                </padding>
@@ -71,7 +71,7 @@
          </children>
       </VBox>
       <Button fx:id="LoadListButton" layoutX="309.0" layoutY="23.0" mnemonicParsing="false" onAction="#loadList" text="Load List" />
-      <TableView fx:id="ListDisplay" layoutX="6.0" layoutY="105.0" prefHeight="329.0" prefWidth="584.0">
+      <TableView fx:id="Table" layoutX="6.0" layoutY="105.0" prefHeight="329.0" prefWidth="584.0">
         <columns>
           <TableColumn fx:id="ItemName" prefWidth="145.0" text="Item Name" />
           <TableColumn fx:id="Description" prefWidth="269.0" text="Description" />

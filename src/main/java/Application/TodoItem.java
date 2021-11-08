@@ -2,23 +2,21 @@ package Application;/*
  *  UCF COP3330 Fall 2021 Application Assignment 1 Solution
  *  Copyright 2021 Nicholas Lopes
  */
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import javafx.scene.control.CheckBox;
 
+@SuppressWarnings("ALL")
 public class TodoItem extends TodoList {
     protected String itemTitle;
     protected String description;
     protected String dueDate;
-    protected String complete;
+    protected CheckBox checkbox = new CheckBox();
 
     public TodoItem(String title, String temp, String date) {
+        //TodoItem Constructor assigns values to object attributes
         this.itemTitle = title;
         this.description = temp;
         this.dueDate = date;
-        this.complete = "N";
+        this.checkbox.setSelected(false);
     }
 
     public String getItemTitle() {
@@ -33,6 +31,10 @@ public class TodoItem extends TodoList {
         return dueDate;
     }
 
+    public CheckBox getCheckbox(){
+        return checkbox;
+    }
+
     public void setItemTitle(String itemTitle) {
         this.itemTitle = itemTitle;
     }
@@ -45,11 +47,4 @@ public class TodoItem extends TodoList {
         this.dueDate = dueDate;
     }
 
-    protected void setComplete(){
-        this.complete = "Y";
-    }
-
-    protected void setIncomplete(){
-        this.complete = "N";
-    }
 }

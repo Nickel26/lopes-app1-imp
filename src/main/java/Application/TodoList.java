@@ -2,16 +2,15 @@ package Application;/*
  *  UCF COP3330 Fall 2021 Application Assignment 1 Solution
  *  Copyright 2021 Nicholas Lopes
  */
-import Application.TodoItem;
 
-import java.text.ParseException;
 import java.util.*;
 
 public class TodoList {
     protected String title;
     protected ArrayList<TodoItem> todoList = new ArrayList<>();
 
-    protected void addItem(String title, String desc, String date) throws ParseException {
+    protected void addItem(String title, String desc, String date) {
+        //verify if list size is 100 and if so remove last item and replace with new item
         if(todoList.size() == 100){
             todoList.remove(99);
         }
@@ -25,19 +24,24 @@ public class TodoList {
     }
 
     protected void display(){
+        //Displays todo list in system terminal
         System.out.printf("%s", title);
-        for(int i = 0 ; i < todoList.size(); i++) {
-            System.out.printf("\n%s %s %s", todoList.get(i).itemTitle, todoList.get(i).description, todoList.get(i).dueDate);
+        for (TodoItem todoItem : todoList) {
+            System.out.printf("\n%s %s %s", todoItem.itemTitle, todoItem.description, todoItem.dueDate);
         }
         System.out.print("\n\n\n");
     }
 
-    protected void  removeItem(){
-
+    protected void  removeItem(int i){
+        //removes item at i index
+        todoList.remove(i);
     }
 
-    protected void  editItem(){
-
+    protected void  editItem(int i, String name, String desc, String date){
+        //edits items title, description, and due date with parameter values
+        todoList.get(i).title = name;
+        todoList.get(i).description = desc;
+        todoList.get(i).dueDate = date;
     }
 
     protected void  saveList(){
