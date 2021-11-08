@@ -13,4 +13,6 @@ Instructions for Application1 Todo List
 	5. To clear List of all items click the Clear List button.
 
 	6. To mark an item as completed check the checkbox within the completed column.
-test 1
+
+	7.To sort by Complete or Incomplete click on either desired checkbox, to go back to normal view of list, make sure both boxes are 
+	
